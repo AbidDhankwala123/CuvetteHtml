@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: black;
+            color: red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <form action="Success.html">
+
+        <label for="first-name" style="padding-right: 10px;">First Name:</label>
+        <input type="text" name="firstName" id="firstName" minlength="3" maxlength="8" required placeholder="Enter your first name" style="margin-bottom: 10px;"><br><!--value="Enter your first name"  -> this also can be added but will act as a text-->
+        
+
+        <label for="last-name" style="padding-right: 10px;">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" required placeholder="Enter your last name" style="margin-bottom: 10px;"><br>
+
+        <label for="email" style="padding-right: 10px;">Email-ID:</label>
+        <input type="email" name="email" id="email" required style="margin-bottom: 10px;" placeholder="abc@gmail.com"><br>
+
+        <label for="Mobile Number" style="padding-right: 10px;">Mobile Number:</label>
+        <input type="tel" name="contact" id="contact"  pattern="[0-9]{10}" placeholder="+91 123-456-789-0" style="margin-bottom: 10px;" required><br>
+        
+        <label for="date of birth" style="padding-right: 10px;">Date-of-Birth:</label>
+        <input type="date" name="age" id="birthdate" required style="margin-bottom: 10px;"><br>
+
+        <label for="address">Address:</label><br>
+        <textarea name="address" id="address" style="margin-bottom: 10px;" required></textarea><br>
+
+        <label for="age" style="padding-right: 10px;">Age:</label>
+        <input type="number" name="age" id="age" min="20" max="50" required step="5" style="margin-bottom: 10px;"><br>
+
+        <label for="work-location" style="padding-right: 10px;">Work Location:</label>
+        <input type="text" name="worklocation" id="worklocation" value="WFH" disabled style="margin-bottom: 10px;"><br>
+
+        <label for="username" style="padding-right: 10px;">Username:</label>
+        <input type="text" name="username" id="username" required minlength="5" maxlength="8" style="margin-bottom: 10px;"><br>
+
+        <label for="password" style="padding-right: 10px;">Password:</label>
+        <input type="password" name="password" id="password" pattern="(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}" required style="margin-bottom: 10px;"><br>
+
+        <label for="confirm-password" style="padding-right: 10px;">Confirm Password:</label>
+        <input type="password" name="confirm-password" id="confirmpassword" required style="margin-bottom: 10px;">
+
+        <section>
+            <label for="gender">Gender:</label><!--for radio buttons and checkbox, name will be same-->
+            <input type="radio" name="gender" id="male" required><label>Male</label>
+            <input type="radio" name="gender" id="female"><label>Female</label>
+            <input type="radio" name="gender" id="other"><label>Other</label>
+        </section>
+        <br>
+
+        <section>
+            <label for="city" style="padding-right: 10px;">City:</label>
+            <select name="city" id="city" required>
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+                <option value="bangalore">Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+            </select>
+         </section>
+        <br>
+
+        <section>
+            <label for="state" style="padding-right: 10px;">State:</label>
+            <select name="state" id="state" required>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="goa">Goa</option>
+                <option value="UP">UP</option>
+            </select>
+         </section>
+        <br>
+
+        <section>
+            <label for="country" style="padding-right: 10px;">Country:</label>
+            <select name="country" id="country" required>
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="russia">Russia</option>
+                <option value="ukraine">Ukraine</option>
+                <option value="uk">UK</option>
+                <option value="saudi">Saudi</option>
+                <option value="dubai">Dubai</option>
+                <option value="brazil">Brazil</option>
+                <option value="turkey">Turkey</option>
+                <option value="afghanistan">Afghanistan</option>
+                <option value="syria">Syria</option>
+                <option value="pakistan">Pakistan</option>
+                <option value="iraq">Iraq</option>
+                <option value="iran">Iran</option>
+            </select>
+         </section>
+        <br>
+
+        <section>
+            <label for="select-food" style="padding-right: 10px;">Which is your more favourite,fruit or vegetable?</label>
+            <select name="food" id="fruit-vegetable">
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="grapes">Grapes</option>
+                </optgroup>
+                <optgroup label="Vegetables">
+                    <option value="ladyfinger">LadyFinger</option>
+                    <option value="onion">Onion</option>
+                    <option value="potato">Potato</option>
+                </optgroup>
+            </select>
+        </section>
+        <br>
+
+        <section>
+            <label for="courses">Choose interested courses:</label>
+            <input type="checkbox" name="checkbox1"> <label for="java">Java</label>
+            <input type="checkbox" name="checkbox2" required checked><label for="MERN">MERN</label>
+            <input type="checkbox" name="checkbox3"><label for="python">Python</label>
+        </section>
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" id="reset" value="Reset">
+    </form>
+</body>
+</html>
